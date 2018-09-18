@@ -1,5 +1,4 @@
 {
-	"baseDir": "scripts",
 	"templatesDir": "templates",
 	"outputBaseDir": "src",
 	"generators": {
@@ -12,20 +11,9 @@
 				"styles.js.liquid": "styles.js"
 			}
 		},
-		"model": {
-			"templateSubDir": "model",
-			"outputSubDir": "models",
-			"templates": {
-				"actions.js.liquid": "view.js",
-				"api.js.liquid": "view.js",
-				"constants.js.liquid": "view.js",
-				"index.js.liquid": "index.js",
-				"reducers.js.liquid": "view.js",
-				"styles.js.liquid": "styles.js"
-			}			
-		},
+
 		"view": {
-			"templateSubDir": "views",
+			"templateSubDir": "view",
 			"outputSubDir": "views",
 			"templates": {
 				"view.js.liquid": "view.js",

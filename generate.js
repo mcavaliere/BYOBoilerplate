@@ -1,33 +1,26 @@
 import parseArgs from 'minimist';
 import Core from './lib/core';
-import Generator from './lib/generator';
+import GeneratorManifest from './lib/generatorManifest';
 
 const configPath = './config/config.json';
-
-// console.log("----------- process.argv.length: ", process.argv.length);
 
 let rawArgs = process.argv.slice(2);
 let argv = parseArgs( rawArgs );
 
-
-
-const config = Core.loadConfig(configPath)
-
-// console.log("----------- loaded config: ", config);
-
-console.log("----------- parseArgs: ", argv);
-// console.log("----------- parseArgs._: ", argv._);
+const config = Core.loadConfig(configPath);
+const manifest = new GeneratorManifest(config)
+const generators = manifest.generators;
 
 if (rawArgs.length < 2) {
 	Core.printUsage();
+	Core.printAvailableGenerators( manifest.generators );
 	process.exit();
 }
-
-// Load all generators
-const generators = Core.initGenerators(config);
-
-console.log("----------- loaded generators: ", generators);
 
 // Target generation task
 const generatorName = argv._[0];
 const generatorInstanceName = argv._[1];
+
+if ( !manifest.generatorIsRegistered( generatorName ) ) {
+	throw `The generator "${generatorName}" is not registered.`;
+}
