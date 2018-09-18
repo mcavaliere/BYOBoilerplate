@@ -1,0 +1,26 @@
+{
+  "name": "react-native-generators",
+  "version": "0.0.1",
+  "description": "Code generation tools for React Native. ",
+  "main": "index.js",
+  "author": "Mike Cavaliere",
+  "license": "MIT",
+  "scripts": {
+    "generate": "babel-node ./generate.js"
+  },
+  "dependencies": {
+    "chalk": "2.4.1",
+    "clui": "0.3.6",
+    "configstore": "4.0.0",
+    "figlet": "1.2.0",
+    "inquirer": "6.2.0",
+    "liquid-node": "3.0.0",
+    "minimist": "1.2.0",
+    "node-mkdirp": "0.0.1"
+  },
+  "devDependencies": {
+    "babel-cli": "6.26.0",
+    "babel-preset-env": "1.7.0",
+    "eslint": "5.6.0"
+  }
+}
