@@ -9,7 +9,6 @@ let argv = parseArgs( rawArgs );
 
 const config = Core.loadConfig(configPath);
 const manifest = new GeneratorManifest(config)
-const generators = manifest.generators;
 
 if (rawArgs.length < 2) {
 	Core.printUsage();
