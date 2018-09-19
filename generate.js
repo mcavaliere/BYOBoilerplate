@@ -23,3 +23,7 @@ const generatorInstanceName = argv._[1];
 if ( !manifest.generatorIsRegistered( generatorName ) ) {
 	throw `The generator "${generatorName}" is not registered.`;
 }
+
+// TODO: write generatorIsValid method which checks config properties.
+
+manifest.getGenerator( generatorName ).generate( generatorInstanceName );
