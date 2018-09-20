@@ -4,7 +4,7 @@
 	"generators": {
 		"component": {
 			"templateSubDir": "component",
-			"outputSubDir": "components",
+			"outputSubDir": "components/{{INSTANCE_NAME}}",
 			"templates": {
 				"component.js.liquid": "{{INSTANCE_NAME}}.component.js",
 				"index.js.liquid": "index.js",
@@ -14,7 +14,7 @@
 
 		"view": {
 			"templateSubDir": "view",
-			"outputSubDir": "views",
+			"outputSubDir": "views/{{INSTANCE_NAME}}",
 			"templates": {
 				"view.js.liquid": "{{INSTANCE_NAME}}.view.js",
 				"index.js.liquid": "index.js",
