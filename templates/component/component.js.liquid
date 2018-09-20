@@ -3,7 +3,7 @@ import { Text, View } from 'react-native';
 import Constants from '../../shared/constants';
 
 // Styles for this View
-import Styles from './{{ COMPONENT_NAME }}.styles';
+import Styles from './{{ INSTANCE_NAME }}.styles';
 
 // Custom components
 //import {} from '../../components';
@@ -11,11 +11,11 @@ import Styles from './{{ COMPONENT_NAME }}.styles';
 // Sub-views
 //import {} from '../';
 
-export default class {{ COMPONENT_NAME }} extends Component {
+export default class {{ INSTANCE_NAME }} extends Component {
 	render() {
 		return (
 			<View style={[ Styles.container, this.props.style ]}>
-				<Text>Component placeholder for {{ COMPONENT_NAME }}</Text>
+				<Text>Component placeholder for {{ INSTANCE_NAME }}</Text>
 			</View>
 		)
 	}
