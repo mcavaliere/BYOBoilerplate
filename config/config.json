@@ -6,9 +6,9 @@
 			"templateSubDir": "component",
 			"outputSubDir": "components",
 			"templates": {
-				"component.js.liquid": "component.js",
+				"component.js.liquid": "{{INSTANCE_NAME}}.component.js",
 				"index.js.liquid": "index.js",
-				"styles.js.liquid": "styles.js"
+				"styles.js.liquid": "{{INSTANCE_NAME}}.styles.js"
 			}
 		},
 
@@ -16,9 +16,9 @@
 			"templateSubDir": "view",
 			"outputSubDir": "views",
 			"templates": {
-				"view.js.liquid": "view.js",
+				"view.js.liquid": "{{INSTANCE_NAME}}.view.js",
 				"index.js.liquid": "index.js",
-				"styles.js.liquid": "styles.js"
+				"styles.js.liquid": "{{INSTANCE_NAME}}.styles.js"
 			}
 		}
 	}
