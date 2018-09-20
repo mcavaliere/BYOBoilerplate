@@ -2,7 +2,7 @@ import parseArgs from 'minimist';
 import Core from './lib/core';
 import GeneratorManifest from './lib/generatorManifest';
 
-const configPath = './config/config.json';
+const configPath = './byobconfig.json';
 
 let rawArgs = process.argv.slice(2);
 let argv = parseArgs( rawArgs );
