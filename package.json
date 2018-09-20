@@ -3,10 +3,12 @@
   "version": "0.0.1",
   "description": "Code generation tools for React Native. ",
   "main": "index.js",
-  "author": "Mike Cavaliere",
+  "author": "Mike Cavaliere <programming@mikecavaliere.com>",
   "license": "MIT",
-  "scripts": {
-    "generate": "babel-node ./generate.js"
+  "homepage": "https://github.com/mcavaliere/BYOBoilerplate",
+  "repository": "https://github.com/mcavaliere/BYOBoilerplate",
+  "bin": {
+    "bgen": "./bin/generate"
   },
   "dependencies": {
     "chalk": "2.4.1",
