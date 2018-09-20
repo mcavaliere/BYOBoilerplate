@@ -1,6 +1,6 @@
 # BYOBoilerplate
 
-Simple, Rails-inspired, fully-customizable code generators for any damn language you'd like. 
+**[ALPHA]** Simple, Rails-inspired, fully-customizable code generators for any damn language you'd like. 
 
 Written in NodeJS. Uses the Liquid templating language. 
 
@@ -25,32 +25,39 @@ These are sample generators that come packaged with BYOBoilerplate. They're writ
 
 
 **`npm run generate component MyComponent`**
-
+```
 src
 └── components
     └── MyComponent
         ├── MyComponent.component.js
         ├── MyComponent.styles.js
         └── index.js
-
+```
 Roll your own. Configure it any way you want. 
 
 **`npm run generate thing MyThing`**
-
+```
 outputFolder
 └── things
     └── MyThing
         ├── thing-file-type-1.whatever1
         ├── thing-file-type-2.whatever2
 
-
+```
 ### Configuration
 
 1. Add your code templates (written in Liquid) to a folder of your choosing (`/templates` by default). 
 
-1. Edit the packaged `byobconfig.json` to create or modify your generator settings. 
+1. Edit the packaged `byobconfig.json` to create or modify your generator settings. See the example `byobconfig.json` below. 
 
-Example `byobconfig.json`:
+1. Generate some code! `npm run generate **generatorName** **instanceName**. `
+
+1. Have a beer, you just saved some time. 
+
+
+### Sample `byobconfig.json`
+
+This comes packaged with BYOBoilerplate. Add or edit as needed. 
 
 ```
 {
@@ -79,10 +86,4 @@ Example `byobconfig.json`:
 }
 
 ```
-
-1. Generate some code! `npm run generate **generatorName** **instanceName**. `
-
-1. Have a beer, you just saved some time. 
-
-
 
