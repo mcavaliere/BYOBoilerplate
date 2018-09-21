@@ -1,8 +1,8 @@
 # BYOBoilerplate
 
-**[ALPHA]** Simple, Rails-inspired, fully-customizable code generators for any damn language you'd like. 
+**[ALPHA]** Simple, customizable code generators for any damn language you'd like. 
 
-Written in NodeJS. Uses the Liquid templating language. 
+Inspired by the `rails generate` command. Written in NodeJS. Uses the Liquid templating language. 
 
 
 <p align="center">
