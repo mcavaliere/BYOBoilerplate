@@ -4,6 +4,13 @@
 
 Written in NodeJS. Uses the Liquid templating language. 
 
+
+<p align="center">
+<img src="byoboilerplate.jpg" width="200" />
+</p>
+	
+
+
 ### What is it?
 
 BYOBoilerplate lets you generate boilerplate code easily, however you like it. 
