@@ -24,7 +24,7 @@ Use BYOBoilerplate:
 These are sample generators that come packaged with BYOBoilerplate. They're written for React / Redux, just because I use those things a lot. Write your own, for any language. 
 
 
-**`npm run generate component MyComponent`**
+**`bgen component MyComponent`**
 ```
 src
 └── components
@@ -35,7 +35,7 @@ src
 ```
 Roll your own. Configure it any way you want. 
 
-**`npm run generate thing MyThing`**
+**`bgen generate thing MyThing`**
 ```
 outputFolder
 └── things
