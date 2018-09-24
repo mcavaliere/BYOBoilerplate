@@ -1,3 +1,0 @@
-#!/usr/bin/env node
-
-babel-node ../generate.js

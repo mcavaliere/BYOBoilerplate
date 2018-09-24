@@ -1,3 +1,11 @@
+#!/usr/bin/env ./node_modules/byoboilerplate/node_modules/.bin/babel-node
+
+// var util = require('util');
+//
+// console.log('-----shell: ' + util.inspect(process.env));
+//
+// process.exit();
+
 import parseArgs from 'minimist';
 import Core from './lib/core';
 import GeneratorManifest from './lib/generatorManifest';
