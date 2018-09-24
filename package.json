@@ -8,7 +8,7 @@
   "homepage": "https://github.com/mcavaliere/BYOBoilerplate",
   "repository": "https://github.com/mcavaliere/BYOBoilerplate",
   "bin": {
-    "bgen": "./generate.js"
+    "bgen": "./cli.js"
   },
   "devDependencies": {
     "babel-cli": "6.26.0",
