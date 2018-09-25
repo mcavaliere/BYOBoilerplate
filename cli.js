@@ -15,24 +15,24 @@ let argv = parseArgs( rawArgs );
 
 // Make sure they run the 'init' command before running a generator.
 if ( !Core.configFileExists() ) {
-	if ( argv._[0] !== 'init' ) {
-		Core.printInitRequirement();
-		process.exit();
-	} else {
-		Commands.init();
-		process.exit();
-	}
+    if ( argv._[0] !== 'init' ) {
+        Core.printInitRequirement();
+        process.exit();
+    } else {
+        Commands.init();
+        process.exit();
+    }
 }
 
 // Verify other arguments.
 if (rawArgs.length < 2) {
-	Core.printUsage();
+    Core.printUsage();
 
-	process.exit();
+    process.exit();
 }
 
 
 const config = Core.loadConfig();
 const manifest = new GeneratorManifest(config);
 
-Commands.generate( manifest, argv._[0], argv._[1] )
+Commands.generate( manifest, argv._[0], argv._[1] );
