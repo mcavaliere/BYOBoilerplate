@@ -24,6 +24,14 @@ if ( !Core.configFileExists() ) {
     }
 }
 
+if ( argv._[0] === 'list' ) {
+    global.__config = Core.loadConfig();
+    global.__manifest = new GeneratorManifest( global.__config );
+    Commands.list( global.__manifest );
+
+    process.exit();
+}
+
 // Verify other arguments.
 if (rawArgs.length < 2) {
     Core.printUsage();
@@ -31,7 +39,11 @@ if (rawArgs.length < 2) {
     process.exit();
 }
 
-const config = Core.loadConfig();
-const manifest = new GeneratorManifest(config);
+global.__config = Core.loadConfig();
+global.__manifest = new GeneratorManifest( global.__config );
 
-Commands.generate( manifest, argv._[0], argv._[1] );
+
+
+
+
+Commands.generate( global.__manifest, argv._[0], argv._[1] );
