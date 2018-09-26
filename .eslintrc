@@ -19,7 +19,14 @@
             "unix"
         ],
         "no-console": 0,
-        "quotes": ["error", "single"],
+        "quotes": [
+            "error",
+            "single",
+            {
+                "allowTemplateLiterals": true,
+                "avoidEscape": true
+            }
+        ],
         "semi": [
             "error",
             "always"
