@@ -31,7 +31,6 @@ if (rawArgs.length < 2) {
     process.exit();
 }
 
-
 const config = Core.loadConfig();
 const manifest = new GeneratorManifest(config);
 

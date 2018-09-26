@@ -24,5 +24,8 @@
     "minimist": "1.2.0",
     "node-mkdirp": "0.0.1",
     "prettier": "1.14.3"
+  },
+  "dependencies": {
+    "fs-extra": "7.0.0"
   }
 }
