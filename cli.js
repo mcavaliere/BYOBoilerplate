@@ -6,7 +6,6 @@ import Commands from './lib/commands';
 import GeneratorManifest from './lib/generatorManifest';
 import path from 'path';
 
-
 global.__dirname = path.resolve(__dirname);
 global.__cwd = process.cwd();
 
