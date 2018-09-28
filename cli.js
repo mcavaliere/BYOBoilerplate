@@ -18,7 +18,6 @@ switch ( argv._[0] ) {
             process.exit();
         }
         Commands.init();
-        process.exit();
         break;
 
     case 'list':
@@ -26,8 +25,8 @@ switch ( argv._[0] ) {
             Core.printInitRequirement();
             process.exit();
         }
+        
         Commands.list();
-        process.exit();
         break;
 
     default:
