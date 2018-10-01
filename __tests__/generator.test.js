@@ -13,6 +13,10 @@ describe('class Generator', () => {
         g = new Generator('view', coreConfig.generators.view, coreConfig);
     });
 
+    afterEach(() => {
+        g = null;
+    });
+
     it('creates an instance', () => {
         expect(g).not.toBeNull();
         expect(g.type).toBeDefined();
@@ -32,7 +36,6 @@ describe('class Generator', () => {
                 )
             );
         });
-
     });
 
     describe('templateFilenames', () => {
@@ -47,7 +50,6 @@ describe('class Generator', () => {
         });
     });
 
-
     describe('outputDir', () => {
         it('returns the correct output directory for the generator', () => {
             expect(g.outputDir('views')).toBe(
@@ -58,10 +60,6 @@ describe('class Generator', () => {
                 )
             )
         });
-    });
-
-    afterEach(() => {
-        g = null;
     });
 });
 
