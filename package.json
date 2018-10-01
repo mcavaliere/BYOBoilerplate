@@ -11,7 +11,7 @@
     "bgen": "./cli.js"
   },
   "scripts": {
-    "test": "jest"
+    "test": "jest --watch --verbose --coverage"
   },
   "devDependencies": {
     "babel-cli": "6.26.0",
