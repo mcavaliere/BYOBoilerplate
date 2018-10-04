@@ -1,6 +1,7 @@
 import Generator from '../lib/generator';
 import fs from 'fs-extra';
 import path from 'path';
+import { Template } from 'liquid-node';
 
 const coreConfig = JSON.parse(
     fs.readFileSync('./byobconfig.json')
@@ -17,13 +18,15 @@ describe('class Generator', () => {
         g = null;
     });
 
-    it('creates an instance', () => {
-        expect(g).not.toBeNull();
-        expect(g.type).toBeDefined();
-        expect(g.config).toBeDefined();
-        expect(g.coreConfig).toBeDefined();
-        expect(g.templates).toBeDefined();
-        expect(g.engine).toBeDefined();
+    describe('constructor()', () => {
+        it('creates an instance', () => {
+            expect(g).not.toBeNull();
+            expect(g.type).toBeDefined();
+            expect(g.config).toBeDefined();
+            expect(g.coreConfig).toBeDefined();
+            expect(g.templates).toBeDefined();
+            expect(g.engine).toBeDefined();
+        });            
     });
 
     describe('templatesDir()', () => {
@@ -50,6 +53,22 @@ describe('class Generator', () => {
         });
     });
 
+    describe('loadTemplateOnce()', () => {
+        it('resolves to a template object', () => {
+            expect.assertions(1);
+
+            return g.loadTemplateOnce('view.js.liquid').then((template) => {
+                return expect(template).toEqual(
+                    expect.objectContaining({
+                        contents: expect.any(Template),
+                        outputSubdir: expect.any(Template),
+                        outputFilename: expect.any(Template)
+                    })
+                );
+            });    
+        });
+    });
+
     describe('outputDir', () => {
         it('returns the correct output directory for the generator', () => {
             expect(g.outputDir('views')).toBe(
@@ -61,5 +80,6 @@ describe('class Generator', () => {
             )
         });
     });
+    
 });
 
