@@ -2,7 +2,6 @@ import Generator from '../lib/generator';
 import GeneratorManifest from '../lib/generatorManifest';
 import fs from 'fs-extra';
 
-
 const coreConfig = JSON.parse(
     fs.readFileSync('./byobconfig.json')
 );

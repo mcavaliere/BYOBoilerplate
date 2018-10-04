@@ -1,21 +1,36 @@
 import Generator from '../lib/generator';
-import fs from 'fs-extra';
+import fs from 'fs';
+import glob from 'glob';
+import mock from 'mock-fs';
 import path from 'path';
 import { Template } from 'liquid-node';
 
-const coreConfig = JSON.parse(
-    fs.readFileSync('./byobconfig.json')
-);
-
 describe('class Generator', () => {
     let g = null;
+    let realFiles = {};
+    let coreConfig;
+
+    beforeAll(() => {
+        // Create in-memory versions of existing files, since we'll 
+        //   be working with a temporary in-memory filesystem.
+        coreConfig = JSON.parse(
+            fs.readFileSync('./byobconfig.json')
+        );
+        let fileNames = glob.sync('./templates/**/*.liquid');
+        fileNames.forEach((item) => {
+            realFiles[item] = fs.readFileSync(item);
+        });
+    });
 
     beforeEach(() => {
+        mock(realFiles);
+
         g = new Generator('view', coreConfig.generators.view, coreConfig);
     });
 
     afterEach(() => {
         g = null;
+        mock.restore();
     });
 
     describe('constructor()', () => {
@@ -77,9 +92,19 @@ describe('class Generator', () => {
                     'src',
                     'views'
                 )
-            )
+            );
         });
     });
-    
+
+    describe('writeTemplate', () => {
+        it('should write the correct files', () => {
+            expect.assertions(1);
+
+            return g.writeTemplate('bar.txt', 'foo', 'File contents here.')
+                .then(() => {
+                    return expect( fs.existsSync('src/foo/bar.txt') ).toEqual(true);
+                });
+        });
+    });    
 });
 

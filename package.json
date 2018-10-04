@@ -26,6 +26,8 @@
     "jest": "23.6.0",
     "liquid-node": "3.0.0",
     "minimist": "1.2.0",
+    "mock-fs": "4.7.0",
+    "node-glob": "1.2.0",
     "node-mkdirp": "0.0.1",
     "prettier": "1.14.3"
   },
