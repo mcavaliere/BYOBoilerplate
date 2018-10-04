@@ -97,7 +97,7 @@ describe('class Generator', () => {
     });
 
     describe('writeTemplate', () => {
-        it('should write the correct files', () => {
+        it('should write a single file', () => {
             expect.assertions(1);
 
             return g.writeTemplate('bar.txt', 'foo', 'File contents here.')
@@ -105,6 +105,20 @@ describe('class Generator', () => {
                     return expect( fs.existsSync('src/foo/bar.txt') ).toEqual(true);
                 });
         });
-    });    
+    });
+
+    describe('generate()', () => {
+        it('should create the appropriate files', () => {
+            expect.assertions(3);
+
+            return g.generate('MyView').then(() => {
+                return Promise.all([
+                    expect(fs.existsSync('src/views/MyView/MyView.view.js')).toEqual(true),
+                    expect(fs.existsSync('src/views/MyView/index.js')).toEqual(true),
+                    expect(fs.existsSync('src/views/MyView/MyView.styles.js')).toEqual(true)
+                ]);
+            });
+        });
+    });
 });
 
