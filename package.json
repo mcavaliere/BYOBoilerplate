@@ -26,7 +26,6 @@
     "test": "jest --watch --verbose --coverage"
   },
   "devDependencies": {
-    "babel-cli": "6.26.0",
     "babel-plugin-transform-object-rest-spread": "6.26.0",
     "babel-preset-env": "1.7.0",
     "chalk": "2.4.1",
@@ -44,6 +43,7 @@
     "prettier": "1.14.3"
   },
   "dependencies": {
-    "fs-extra": "7.0.0"
+    "fs-extra": "7.0.0",
+    "babel-cli": "6.26.0"
   }
 }
