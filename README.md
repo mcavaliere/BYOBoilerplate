@@ -1,6 +1,6 @@
 # BYOBoilerplate
 
-**[ALPHA]** Simple, customizable code generators for any damn language you'd like. 
+**[ALPHA]** A simple, customizable code generator for the command line.
 
 Inspired by the `rails generate` command. Written in NodeJS. Uses the Liquid templating language. 
 

@@ -1,12 +1,24 @@
 {
   "name": "byoboilerplate",
   "version": "0.0.1",
-  "description": "Code generation tools for React Native. ",
-  "main": "generate.js",
-  "author": "Mike Cavaliere <programming@mikecavaliere.com>",
+  "description": "A simple, customizable code generator for the command line. Inspired by the rails generate command. Uses the Liquid templating language.",
+  "author": "Mike Cavaliere <npm@mikecavaliere.com>",
   "license": "MIT",
   "homepage": "https://github.com/mcavaliere/BYOBoilerplate",
   "repository": "https://github.com/mcavaliere/BYOBoilerplate",
+  "bugs": "https://github.com/mcavaliere/BYOBoilerplate/issues",
+  "keywords": [
+    "boilerplate", 
+    "cli", 
+    "code", 
+    "generator", 
+    "generation", 
+    "node", 
+    "rails", 
+    "react", 
+    "react native", 
+    "redux"
+  ],
   "bin": {
     "bgen": "./cli.js"
   },
