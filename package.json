@@ -23,7 +23,8 @@
     "bgen": "./cli.js"
   },
   "scripts": {
-    "test": "jest --watch --verbose --coverage"
+    "test": "jest --watch --verbose --coverage",
+    "bgen": "./cli.js"
   },
   "devDependencies": {
     "babel-plugin-transform-object-rest-spread": "6.26.0",
