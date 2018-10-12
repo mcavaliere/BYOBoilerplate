@@ -8,15 +8,15 @@
   "repository": "https://github.com/mcavaliere/BYOBoilerplate",
   "bugs": "https://github.com/mcavaliere/BYOBoilerplate/issues",
   "keywords": [
-    "boilerplate", 
-    "cli", 
-    "code", 
-    "generator", 
-    "generation", 
-    "node", 
-    "rails", 
-    "react", 
-    "react native", 
+    "boilerplate",
+    "cli",
+    "code",
+    "generator",
+    "generation",
+    "node",
+    "rails",
+    "react",
+    "react native",
     "redux"
   ],
   "bin": {
@@ -28,12 +28,13 @@
     "test": "jest --watch --verbose --coverage"
   },
   "dependencies": {
-    "fs-extra": "7.0.0",
-    "babel-cli": "6.26.0",
-    "babel-plugin-transform-object-rest-spread": "6.26.0",
-    "babel-preset-env": "1.7.0",
+    "@babel/cli": "7.1.2",
+    "@babel/core": "7.1.2",
+    "@babel/polyfill": "7.0.0",
+    "@babel/preset-env": "7.1.0",
     "chalk": "2.4.1",
     "clui": "0.3.6",
+    "fs-extra": "7.0.0",
     "inquirer": "6.2.0",
     "liquid-node": "3.0.0",
     "node-mkdirp": "0.0.1"

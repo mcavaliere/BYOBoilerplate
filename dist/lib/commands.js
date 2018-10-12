@@ -1,62 +1,58 @@
-'use strict';
+"use strict";
 
 Object.defineProperty(exports, "__esModule", {
-    value: true
+  value: true
 });
+exports.default = void 0;
 
-var _core = require('./core');
-
-var _core2 = _interopRequireDefault(_core);
+var _core = _interopRequireDefault(require("./core"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var Commands = {
-    init: function init() {
-        _core2.default.printHeading();
+const Commands = {
+  init: () => {
+    _core.default.printHeading();
 
-        console.log('  ...initializing ${ Constants.CONFIG_FILE_PATH } with default generators...');
+    console.log('  ...initializing ${ Constants.CONFIG_FILE_PATH } with default generators...');
 
-        if (_core2.default.configFileExists()) {
-            _core2.default.printConfigFileAlreadyExists();
-            process.exit();
-        }
+    if (_core.default.configFileExists()) {
+      _core.default.printConfigFileAlreadyExists();
 
-        _core2.default.createConfig();
-
-        console.log('  ...initializing ${ Constants.TEMPLATE_DIR_PATH } with default generators...');
-
-        if (_core2.default.templateDirectoryExists()) {
-            _core2.default.printTemplateDirectoryAlreadyExists();
-            process.exit();
-        }
-
-        _core2.default.copyTemplates();
-
-        console.log('  ...everything done.\n');
-    },
-
-    list: function list() {
-        _core2.default.printHeading();
-
-        var core = new _core2.default();
-
-        console.log('  Available generators: \n');
-
-        core.manifest.generatorNames.forEach(function (g) {
-            console.log('  *', g);
-        });
-
-        console.log('\n');
-    },
-
-    generate: function generate(manifest, generatorName, instanceName) {
-        // TODO: write generatorIsValid method which checks config properties.
-        if (!manifest.generatorIsRegistered(generatorName)) {
-            throw 'The generator "' + generatorName + '" is not registered.';
-        }
-
-        manifest.getGenerator(generatorName).generate(instanceName);
+      process.exit();
     }
-};
 
-exports.default = Commands;
+    _core.default.createConfig();
+
+    console.log('  ...initializing ${ Constants.TEMPLATE_DIR_PATH } with default generators...');
+
+    if (_core.default.templateDirectoryExists()) {
+      _core.default.printTemplateDirectoryAlreadyExists();
+
+      process.exit();
+    }
+
+    _core.default.copyTemplates();
+
+    console.log('  ...everything done.\n');
+  },
+  list: () => {
+    _core.default.printHeading();
+
+    let core = new _core.default();
+    console.log('  Available generators: \n');
+    core.manifest.generatorNames.forEach(g => {
+      console.log('  *', g);
+    });
+    console.log('\n');
+  },
+  generate: (manifest, generatorName, instanceName) => {
+    // TODO: write generatorIsValid method which checks config properties.
+    if (!manifest.generatorIsRegistered(generatorName)) {
+      throw "The generator \"".concat(generatorName, "\" is not registered.");
+    }
+
+    manifest.getGenerator(generatorName).generate(instanceName);
+  }
+};
+var _default = Commands;
+exports.default = _default;
