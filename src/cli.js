@@ -1,4 +1,4 @@
-#!/usr/bin/env ./node_modules/byoboilerplate/node_modules/.bin/babel-node
+#!/usr/bin/env node
 
 import parseArgs from 'minimist';
 import Core from './lib/core';

@@ -20,11 +20,12 @@
     "redux"
   ],
   "bin": {
-    "bgen": "./cli.js"
+    "bgen": "./dist/cli.js"
   },
   "scripts": {
-    "test": "jest --watch --verbose --coverage",
-    "bgen": "./cli.js"
+    "bgen": "node ./dist/cli.js",
+    "build": "babel src --out-dir dist",
+    "test": "jest --watch --verbose --coverage"
   },
   "dependencies": {
     "fs-extra": "7.0.0",
