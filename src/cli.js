@@ -1,5 +1,3 @@
-#!/usr/bin/env node
-
 import parseArgs from 'minimist';
 import Core from './lib/core';
 import Commands from './lib/commands';
