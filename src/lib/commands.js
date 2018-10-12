@@ -4,7 +4,7 @@ const Commands = {
     init: () => {
         Core.printHeading();
 
-        console.log('  ...initializing ${ Constants.CONFIG_FILE_PATH } with default generators...');
+        console.log(`  ...initializing ${ Constants.CONFIG_FILE_PATH } with default generators...`);
 
         if ( Core.configFileExists() ) {
             Core.printConfigFileAlreadyExists();
@@ -13,7 +13,7 @@ const Commands = {
 
         Core.createConfig();
 
-        console.log('  ...initializing ${ Constants.TEMPLATE_DIR_PATH } with default generators...');
+        console.log(`  ...initializing ${ Constants.TEMPLATE_DIR_PATH } with default generators...`);
 
         if ( Core.templateDirectoryExists() ) {
             Core.printTemplateDirectoryAlreadyExists();

@@ -13,7 +13,7 @@ const Commands = {
   init: () => {
     _core.default.printHeading();
 
-    console.log('  ...initializing ${ Constants.CONFIG_FILE_PATH } with default generators...');
+    console.log("  ...initializing ".concat(Constants.CONFIG_FILE_PATH, " with default generators..."));
 
     if (_core.default.configFileExists()) {
       _core.default.printConfigFileAlreadyExists();
@@ -23,7 +23,7 @@ const Commands = {
 
     _core.default.createConfig();
 
-    console.log('  ...initializing ${ Constants.TEMPLATE_DIR_PATH } with default generators...');
+    console.log("  ...initializing ".concat(Constants.TEMPLATE_DIR_PATH, " with default generators..."));
 
     if (_core.default.templateDirectoryExists()) {
       _core.default.printTemplateDirectoryAlreadyExists();
