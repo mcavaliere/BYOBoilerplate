@@ -1,4 +1,4 @@
-import Generator from '../lib/generator';
+import Generator from '../src/lib/generator';
 import fs from 'fs';
 import glob from 'glob';
 import mock from 'mock-fs';

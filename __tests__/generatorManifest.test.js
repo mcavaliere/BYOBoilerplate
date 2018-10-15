@@ -1,5 +1,5 @@
-import Generator from '../lib/generator';
-import GeneratorManifest from '../lib/generatorManifest';
+import Generator from '../src/lib/generator';
+import GeneratorManifest from '../src/lib/generatorManifest';
 import fs from 'fs-extra';
 
 const coreConfig = JSON.parse(
@@ -24,7 +24,6 @@ describe('class GeneratorManifest', () => {
         it('creates an instance', () => {
             expect(m).toBeDefined();
             expect(m._generators).toBeDefined();
-            expect(m._core).toBeDefined();
         });
     });
     
