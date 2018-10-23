@@ -1,10 +1,7 @@
 import babel from 'rollup-plugin-babel';
 import commonjs from 'rollup-plugin-commonjs';
 import resolve from 'rollup-plugin-node-resolve';
-const babelConfig = require( './babel.config' );
-const resolveConfig = {
-    
-};
+import builtins from 'rollup-plugin-node-builtins';
 
 export default {
     banner: '#!/usr/bin/env node',
@@ -24,16 +21,17 @@ export default {
     ],
     plugins: [
         resolve(),
+        builtins(),
         commonjs(
-            {
+            // {
             //     namedExports: {
             //         // left-hand side can be an absolute path, a path
             //         // relative to the current directory, or the name
             //         // of a module in node_modules
             //         // 'node_modules/node-mkdirp/index.js': [ 'mkdirp' ]
             //     }
-            }
+            // }
         ),
-        // babel(babelConfig)
+        // babel()
     ]
 };

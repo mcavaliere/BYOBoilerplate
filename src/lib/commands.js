@@ -1,4 +1,5 @@
 import Core from './core';
+import Constants from './constants';
 
 const Commands = {
     init: () => {

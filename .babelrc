@@ -7,13 +7,13 @@
                     "node": true
                 },
                 "useBuiltIns": "usage"
-            },
-        ],
+            }
+        ]
     ], 
     
     "plugins": [
         "@babel/plugin-transform-template-literals",
         "@babel/plugin-transform-spread"
     ]
-
+    
 }
