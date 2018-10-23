@@ -1,5 +1,9 @@
 # Based off boilerplate node gitignore from https://raw.githubusercontent.com/github/gitignore/master/Node.gitignore
 
+# Lock files
+package-lock.json
+yarn-lock.json
+
 # Logs
 logs
 *.log
