@@ -1,6 +1,6 @@
 {
   "name": "byoboilerplate",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "A simple, customizable code generator for the command line. Inspired by the rails generate command. Uses the Liquid templating language.",
   "author": "Mike Cavaliere <npm@mikecavaliere.com>",
   "license": "MIT",
